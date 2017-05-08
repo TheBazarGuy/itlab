@@ -1,0 +1,10 @@
+List of Students
+  <ul class="students">
+  <% for(var i=0; i<students.length; i++) {%>
+    <li class="students">
+      <span><%=" USN: " +students[i].usn+"."%></span>
+      <span><%=" Name: " +students[i].name%></span>
+      <span><%=" Company: " +students[i].cname%></span>
+    </li>
+  <% } %>
+</ul>

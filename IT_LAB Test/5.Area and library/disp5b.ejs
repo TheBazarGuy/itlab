@@ -1,0 +1,11 @@
+List of Books
+  <ul class="books">
+  <% for(var i=0; i<books.length; i++) {%>
+    <li class="books">
+      <span><%=" Name: " +books[i].name%></span>
+      <span><%=" Title: " + books[i].title%></span>
+      <span><%=" Author: " + books[i].author%></span>
+      <span><%=" Year: " + books[i].year%></span>
+    </li>
+  <% } %>
+</ul>

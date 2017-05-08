@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+names=new Array();
+i=0;
+while(true)
+{
+a=prompt("Enter a series of names ")
+if(a!=null)
+{
+names[i]=a;
+i++;
+}
+else break;
+}
+names.sort();
+document.write('<ol><li>'+names.join('</li><li>')+'</li></ol>');//Writing in an ordered list
+</script>
+</body>
+</html>

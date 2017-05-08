@@ -1,0 +1,11 @@
+List of Employees
+  <ul class="employees">
+  <% for(var i=0; i<employees.length; i++) {%>
+    <li class="employees">
+      <span><%=" Employee Name :" +employees[i].empname%></span>
+      <span><%=" Employee Code :" + employees[i].empcode%></span>
+      <span><%=" Employee Department :" + employees[i].dept%></span>
+      <span><%=" Employee Salary :" + employees[i].sal%></span>
+    </li>
+  <% } %>
+</ul>

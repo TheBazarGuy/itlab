@@ -1,0 +1,48 @@
+<html>
+<body>
+<script>
+function Calculator(num1,num2,ch)
+{
+	this.num1=num1;
+	this.num2=num2;
+	this.ch=ch;
+}
+Calculator.prototype.result=function()
+{
+	if(this.ch==1)
+	{
+		ans=this.num1+this.num2;
+		document.write("Sum is "+ans);
+	}
+	if(this.ch==2)
+	{
+		ans=this.num1-this.num2;
+		document.write("Difference is "+ans);
+	}
+	if(this.ch==3)
+	{
+		ans=this.num1*this.num2;
+		document.write("Product is "+ans);
+	}
+	if(this.ch==4)
+	{
+		if(this.num2==0)
+		{
+			document.write("Divide by 0 error");
+		}
+		else
+		{
+			ans=this.num1*this.num2;
+			document.write("Quotient is "+ans);
+		}
+	}
+}
+
+var num1=parseInt(prompt("Enter a number"));
+var num2=parseInt(prompt("Enter a number"));
+var ch=parseInt(prompt("Enter 1.Addition 2.Subtraction 3.Multiplication 4.Division"));
+var ans=new Calculator(num1,num2,ch);
+ans.result();
+</script>
+</body>
+</html>

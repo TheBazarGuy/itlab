@@ -1,0 +1,11 @@
+List of Faculty
+  <ul class="faculty">
+  <% for(var i=0; i<faculty.length; i++) {%>
+    <li class="faculty">
+      <span><%=" ID: " +faculty[i].id+"."%></span>
+      <span><%=" Title: " +faculty[i].title%></span>
+      <span><%=" Name: " +faculty[i].name%></span>
+      <span><%=" Designation: " +faculty[i].desig%></span>
+    </li>
+  <% } %>
+</ul>

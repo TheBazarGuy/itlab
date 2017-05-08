@@ -1,0 +1,51 @@
+<html>
+<body>
+<script>
+
+ch=parseInt(prompt("Enter 1 for SGPA Enter 2 for CGPA"));
+if(ch==1)
+	getsgpa();
+else
+	getcgpa();
+
+function getsgpa()
+{
+	var cred=parseInt(prompt("Enter no of credits points obtained"));
+	var tot=parseInt(prompt("Enter total number of credit points"));
+	function calculatesgpa()
+	{
+		var sgpa=cred/tot*10;
+		document.write("SGPA is "+sgpa);
+	}
+	calculatesgpa();
+}
+
+function getcgpa()
+{
+	var semester=parseInt(prompt("Enter no of semesters"));
+	var credits=new Array(semester);
+	var total=new Array(semester);
+	for(i=0;i<semester;i++)
+	{
+		credits[i]=parseInt(prompt("Enter no of credits points obtained in semester "+(i+1)));
+		total[i]=parseInt(prompt("Enter total no of credit points in semester "+(i+1)));
+	}
+	function calculatecgpa()
+	{
+		var sum_credits=0;
+		var sum_total=0;
+		for(i=0;i<semester;i++)
+		{
+			sum_credits+=credits[i];
+			sum_total+=total[i];
+		}
+		var cgpa=sum_credits/sum_total*10;
+		document.write("CGPA is "+cgpa);
+	}
+	calculatecgpa();
+}
+	
+
+</script>
+</body>
+</html>

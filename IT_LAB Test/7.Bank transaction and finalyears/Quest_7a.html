@@ -1,0 +1,59 @@
+<html>
+<body>
+<script>
+
+var min_bal=1000;
+ch=parseInt(prompt("Enter 1 for withdrawal Enter 2 for deposit"));
+if(ch==1)
+	withdraw();
+else
+	deposit();
+
+function withdraw()
+{
+	var balance=parseInt(prompt("Enter the balance"));
+	var amt=parseInt(prompt("Enter amount to Withdraw"));
+	function withdraw_amount()
+	{
+		if(balance-amt<min_bal)
+		{
+			document.write("Insufficient Balance!!Withdrawal Failed");
+		}
+		else
+		{
+			
+			balance-=amt;
+			document.write("Withdrawal Successful");
+			document.write("</br>");
+			document.write("Balance is now "+balance);
+		}
+	}
+	withdraw_amount();
+}
+
+function deposit()
+{
+	var balance=parseInt(prompt("Enter the balance"));
+	var amt=parseInt(prompt("Enter amount to Deposit"));
+	function deposit_amount()
+	{
+		if(amt<=0)
+		{
+			document.write("Incorrect amount to deposit!!!");
+		}
+		else
+		{
+			
+			balance+=amt;
+			document.write("Deposit Successful");
+			document.write("</br>");
+			document.write("Balance is now "+balance);
+		}
+	}
+	deposit_amount();
+}
+
+</script>
+</body>
+</html>		
+	
